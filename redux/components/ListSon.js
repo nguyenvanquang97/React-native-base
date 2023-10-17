@@ -1,14 +1,8 @@
 import React, { Component, useEffect, useState } from 'react';
 import { View, StyleSheet, KeyboardAvoidingView, Platform, FlatList, Text, ActivityIndicator, Touchable, TouchableOpacity } from 'react-native';
-import FloatingLabelInput from '../component/TextInput';
-import { Formik } from 'formik';
-import { ValidationSchema, initialValues } from '../component/Validate';
-import ListTitle from '../component/ListTitle/listTitle';
-import Cancle from '../component/svg/cancel';
-import CBText from '../component/CBText';
-import CustomButton from '../component/Button/CustomButton';
+
+
 import { connect, useDispatch, useSelector } from 'react-redux';
-import { register } from '../actions/ActionUser';
 import { getData } from '../actions/ActionData';
 import fetchClient from '../api/getData/fetchClient';
 
@@ -28,6 +22,7 @@ export default function ListSon(props) {
                 method: "GET"
             })
             dispatch(getData(res.data.data))
+            console.log(res.data.data)
             setData(res.data.data)
         } catch (error) {
             console.log(error);
@@ -74,7 +69,7 @@ export default function ListSon(props) {
                 data={data}
                 renderItem={({ item }) => (
                     <TouchableOpacity onPress={() => console.log(item.id)} style={{ backgroundColor: 'yellow', margin: 10, padding: 20, height: 400 }}>
-                        <Text>{item.id}</Text>
+                        <Text>{item.appCatalog}</Text>
 
                     </TouchableOpacity>
                 )}

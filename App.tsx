@@ -10,13 +10,19 @@ import rootSaga from './redux/sagas/rootSaga';
 
 import ListSon from './redux/components/ListSon';
 import RegistrationForm from './redux/components/RegistrationForm';
+import { MenuProvider } from 'react-native-popup-menu';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 //Middleware
 const sagaMiddleware = createSagaMiddleware();
 //Từ applyMiddleware vào Reducers thì tạo một store, sagaMiddleware nằm giữa Action và Reducers.
 let store = createStore(allReducers, applyMiddleware(sagaMiddleware));
 const App = () => (
   <Provider store={store}>
-    <RegistrationForm />
+    <MenuProvider>
+    <SafeAreaProvider>
+    <ListSon />
+    </SafeAreaProvider>
+    </MenuProvider>
   </Provider>
 );
 export default class AppSaga extends Component {
