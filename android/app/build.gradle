@@ -73,9 +73,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.vneid_clone"
+    namespace "com.time_keeping_app"
     defaultConfig {
-        applicationId "com.vneid_clone"
+        applicationId "com.time_keeping_app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

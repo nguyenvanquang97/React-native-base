@@ -4,7 +4,7 @@ import Icon, { IconSource } from 'react-native-paper/src/components/Icon';
 import { Snackbar } from 'react-native-paper';
 import CBText from '../CBText';
 import { RangeSlider, Slider } from '@react-native-assets/slider';
-import { COLORS } from '../styles/color';
+import { COLORS } from '../../assets/styles/color';
 
 
 

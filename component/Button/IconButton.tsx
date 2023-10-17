@@ -4,7 +4,7 @@ import { TouchableOpacity } from 'react-native';
 import CBText from '../CBText';
 import Icon, { IconSource } from 'react-native-paper/src/components/Icon';
 import { } from 'react-native-modal';
-import { COLORS } from '../styles/color';
+import { COLORS } from '../../assets/styles/color';
 
 
 interface IconButton {

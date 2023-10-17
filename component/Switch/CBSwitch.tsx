@@ -3,19 +3,19 @@ import { View, StyleSheet, ViewStyle, Text, TextStyle, GestureResponderEvent, To
 import Icon, { IconSource } from 'react-native-paper/src/components/Icon';
 import { Snackbar } from 'react-native-paper';
 import CBText from '../CBText';
-import { COLORS } from '../styles/color';
+import { COLORS } from '../../assets/styles/color';
 
 
 
 
-interface CBSwicht {
+interface CBSwitch {
     value: boolean | any
     onValueChange: any
     mode?: 'Right label' | 'Left label' | 'Contain label',
     Disable?: boolean | any
 }
 
-const CBSwicht: React.FC<CBSwicht> = ({
+const CBSwitch: React.FC<CBSwitch> = ({
     value,
     onValueChange,
     mode,
@@ -77,4 +77,4 @@ const styles = StyleSheet.create({
         top: 2,
     },
 });
-export default CBSwicht;
+export default CBSwitch;

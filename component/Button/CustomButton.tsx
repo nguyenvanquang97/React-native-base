@@ -4,7 +4,7 @@ import { View, StyleSheet, ViewStyle, Text, TouchableOpacity } from 'react-nativ
 import CBText from '../CBText';
 import Icon, { IconSource } from 'react-native-paper/src/components/Icon';
 import { GestureResponderEvent } from 'react-native-modal';
-import { COLORS } from '../styles/color';
+import { COLORS } from '../../assets/styles/color';
 
 
 interface CustomButton {

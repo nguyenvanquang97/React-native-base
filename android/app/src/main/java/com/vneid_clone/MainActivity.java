@@ -1,4 +1,4 @@
-package com.vneid_clone;
+package com.time_keeping_app;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
@@ -13,7 +13,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "VNEid_clone";
+    return "time_keeping_app";
   }
 
   /**

@@ -12,15 +12,31 @@ import ListSon from './redux/components/ListSon';
 import RegistrationForm from './redux/components/RegistrationForm';
 import { MenuProvider } from 'react-native-popup-menu';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from '@react-navigation/native';
 //Middleware
 const sagaMiddleware = createSagaMiddleware();
 //Từ applyMiddleware vào Reducers thì tạo một store, sagaMiddleware nằm giữa Action và Reducers.
 let store = createStore(allReducers, applyMiddleware(sagaMiddleware));
+export type RootStackParamList = {
+  Login:undefined
+};
+
+const RootStack = createNativeStackNavigator<RootStackParamList>();
+const screenOptions = {
+  headerShown: false,
+  gestureEnabled: false,
+};
 const App = () => (
   <Provider store={store}>
     <MenuProvider>
     <SafeAreaProvider>
-    <ListSon />
+    <NavigationContainer>
+            <RootStack.Navigator
+              initialRouteName="Login" screenOptions={screenOptions}>
+              <RootStack.Screen name="Login" component={Login} />
+              </RootStack.Navigator>
+              </NavigationContainer>
     </SafeAreaProvider>
     </MenuProvider>
   </Provider>

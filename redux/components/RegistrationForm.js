@@ -4,7 +4,7 @@ import { View, StyleSheet, KeyboardAvoidingView, Platform, Text } from 'react-na
 import { Formik } from 'formik';
 import { ValidationSchema, initialValues } from '../../component/TextInput/Validate';
 
-import ListTitle from '../../component/ListTitle/listTitle';
+import ListTitle from '../../component/ListTitle/ListTitle';
 
 import CBText from '../../component/CBText';
 

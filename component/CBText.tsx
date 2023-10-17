@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { View, StyleSheet, ViewStyle, Text } from 'react-native';
 
-import TextStyle from './styles/TextStyle';
+import TextStyle from '../assets/styles/TextStyle';
 
 
 

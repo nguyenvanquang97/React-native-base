@@ -2,8 +2,8 @@ import React, { Children, ReactNode } from 'react';
 import { View, StyleSheet, ViewStyle, Text, TextStyle, GestureResponderEvent, TouchableOpacity } from 'react-native';
 import Icon, { IconSource } from 'react-native-paper/src/components/Icon';
 import CBText from '../CBText';
-import { COLORS } from '../styles/color';
-interface CBprogess {
+import { COLORS } from '../../assets/styles/color';
+interface CustomProgress {
     iconLeft?: IconSource | any,
     iconRight?: IconSource | any,
     action: any,
@@ -15,7 +15,7 @@ interface CBprogess {
     style?: ViewStyle;
 }
 
-const CBprogess: React.FC<CBprogess> = ({
+const CustomProgress: React.FC<CustomProgress> = ({
     iconLeft,
     iconRight,
     action,
@@ -99,4 +99,4 @@ const CBprogess: React.FC<CBprogess> = ({
     );
 };
 
-export default CBprogess;
+export default CustomProgress;
