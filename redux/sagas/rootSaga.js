@@ -1,11 +1,13 @@
 import { all } from 'redux-saga/effects';
+import { watchFilterData, watchGetOrder, watchGetOrderStatus } from './orderSaga';
+import { watchLogin } from './accountSaga';
 
-import { sayHello, watchData, watchGetData, watchRegister } from './counterSagas';
-import { watchIncrement, watchDecrement } from './counterSagas';
 
 export default function* rootSaga() {
     yield all([
-        watchData(),
-        watchGetData(),
+        watchGetOrder(),
+        watchLogin(),
+        watchGetOrderStatus(),
+        watchFilterData()
     ]);
 }
