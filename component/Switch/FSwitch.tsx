@@ -2,20 +2,20 @@ import React, { Children, ReactNode } from 'react';
 import { View, StyleSheet, ViewStyle, Text, TextStyle, GestureResponderEvent, TouchableWithoutFeedback } from 'react-native';
 import Icon, { IconSource } from 'react-native-paper/src/components/Icon';
 import { Snackbar } from 'react-native-paper';
-import CBText from '../CBText';
+import FText from '../FText';
 import { COLORS } from '../../assets/styles/color';
 
 
 
 
-interface CBSwitch {
+interface FSwitch {
     value: boolean | any
     onValueChange: any
     mode?: 'Right label' | 'Left label' | 'Contain label',
     Disable?: boolean | any
 }
 
-const CBSwitch: React.FC<CBSwitch> = ({
+const FSwitch: React.FC<FSwitch> = ({
     value,
     onValueChange,
     mode,
@@ -32,13 +32,13 @@ const CBSwitch: React.FC<CBSwitch> = ({
                     {!value && <Text style={{ marginStart: 26, color: 'white' }} >OFF</Text>}
                 </View>) : (
                     <View style={{ flexDirection: 'row', alignContent: 'center' }}>
-                        {mode === 'Left label' && <CBText textAlign='center' styleName='Label4'>{!value ? 'OFF' : 'On'} {Disable && ' - Disable'}</CBText>}
+                        {mode === 'Left label' && <FText textAlign='center' styleName='Label4'>{!value ? 'OFF' : 'On'} {Disable && ' - Disable'}</FText>}
                         <View style={[styles.switchContainerde, { backgroundColor: value ? COLORS.PrimaryColor : '#E5E5EA', opacity: Disable && 0.7 }]}>
 
                             <View style={[styles.thumb, { left: value ? 22 : 2 }]} ></View>
 
                         </View>
-                        {mode === 'Right label' && <CBText textAlign='center' styleName='Label4'>{!value ? 'OFF' : 'On'} {Disable && ' - Disable'}</CBText>}
+                        {mode === 'Right label' && <FText textAlign='center' styleName='Label4'>{!value ? 'OFF' : 'On'} {Disable && ' - Disable'}</FText>}
 
 
 
@@ -77,4 +77,4 @@ const styles = StyleSheet.create({
         top: 2,
     },
 });
-export default CBSwitch;
+export default FSwitch;

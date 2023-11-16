@@ -1,4 +1,3 @@
-import { saveToken } from "../../utils/AsyncStorage";
 import {LOGIN, LOGIN_FAILED, LOGIN_SUCCESS } from "../actions/actionTypes";
 const initialState = {
     token: "",

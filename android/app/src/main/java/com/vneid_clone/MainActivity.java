@@ -1,4 +1,4 @@
-package com.time_keeping_app;
+package com.react_native_base;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;

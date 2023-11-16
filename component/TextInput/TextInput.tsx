@@ -4,7 +4,7 @@ import { FormikContextType, useFormikContext } from 'formik';
 import Icon, { IconSource } from 'react-native-paper/src/components/Icon';
 import Eye from '../../assets/svg/eye';
 import Eye_slash from '../../assets/svg/eye-slash';
-import CBText from '../CBText';
+import FText from '../FText';
 
 interface Props {
   label: string;
@@ -112,7 +112,7 @@ const FloatingLabelInput: React.FC<Props> = ({
       </View>
       {formik.touched[name] && formik.errors[name] && (
         <View style={{ marginTop: 5 }}>
-          <CBText styleName='Subtitle3'>{formik.errors[name] as string}</CBText>
+          <FText styleName='Subtitle3'>{formik.errors[name] as string}</FText>
         </View>
       )}
     </View>

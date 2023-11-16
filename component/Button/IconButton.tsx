@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { View, StyleSheet, ViewStyle, Text, GestureResponderEvent } from 'react-native';
 import { TouchableOpacity } from 'react-native';
-import CBText from '../CBText';
+import FText from '../FText';
 import Icon, { IconSource } from 'react-native-paper/src/components/Icon';
 import { } from 'react-native-modal';
 import { COLORS } from '../../assets/styles/color';

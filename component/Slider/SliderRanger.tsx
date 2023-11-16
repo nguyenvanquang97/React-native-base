@@ -2,7 +2,7 @@ import React, { Children, ReactNode } from 'react';
 import { View, StyleSheet, ViewStyle, Text, TextStyle, GestureResponderEvent, TouchableOpacity } from 'react-native';
 import Icon, { IconSource } from 'react-native-paper/src/components/Icon';
 import { Snackbar } from 'react-native-paper';
-import CBText from '../CBText';
+import FText from '../FText';
 import { RangeSlider, Slider } from '@react-native-assets/slider';
 import { COLORS } from '../../assets/styles/color';
 
@@ -55,13 +55,13 @@ const SliderRanger: React.FC<SliderRanger> = ({
                         <View style={{ flexDirection: 'row', paddingVertical: 2 }}>
                             <View style={{ flex: 1 }}>
                                 {contentTitle !== undefined &&
-                                    <CBText styleName='Title4'>{contentTitle}</CBText>
+                                    <FText styleName='Title4'>{contentTitle}</FText>
                                 }
 
                             </View>
                             <TouchableOpacity style={{ flex: 1, alignItems: 'flex-end' }}>
                                 {TextActionView !== undefined &&
-                                    <CBText styleName='ButonText2'>{TextActionView}</CBText>
+                                    <FText styleName='ButonText2'>{TextActionView}</FText>
                                 }
 
                             </TouchableOpacity>
@@ -115,10 +115,10 @@ const SliderRanger: React.FC<SliderRanger> = ({
                     {value && value1 &&
                         <View style={{ flexDirection: 'row', paddingHorizontal: 10 }}>
                             <View style={{ flex: 1 }}>
-                                <CBText styleName='Title6'>{range[0]}</CBText>
+                                <FText styleName='Title6'>{range[0]}</FText>
                             </View>
                             <View style={{ flex: 1, alignItems: 'flex-end' }}>
-                                <CBText styleName='Title6'>{range[1]}</CBText>
+                                <FText styleName='Title6'>{range[1]}</FText>
                             </View>
                         </View>
                     }
@@ -132,13 +132,13 @@ const SliderRanger: React.FC<SliderRanger> = ({
                         <View style={{ flexDirection: 'row', paddingVertical: 2 }}>
                             <View>
                                 {contentTitle !== undefined &&
-                                    <CBText styleName='Title4'>{contentTitle}</CBText>
+                                    <FText styleName='Title4'>{contentTitle}</FText>
                                 }
 
                             </View>
                             <TouchableOpacity style={{ flex: 1, alignItems: 'flex-end' }}>
                                 {TextActionView !== undefined &&
-                                    <CBText styleName='ButonText2'>{TextActionView}</CBText>
+                                    <FText styleName='ButonText2'>{TextActionView}</FText>
                                 }
 
                             </TouchableOpacity>
@@ -190,10 +190,10 @@ const SliderRanger: React.FC<SliderRanger> = ({
                     {value && value1 &&
                         <View style={{ flexDirection: 'row', paddingLeft: 10 }}>
                             <View style={{ flex: 1 }}>
-                                <CBText styleName='Title6'>0%</CBText>
+                                <FText styleName='Title6'>0%</FText>
                             </View>
                             <View style={{ flex: 1, alignItems: 'flex-end' }}>
-                                <CBText styleName='Title6'>100%</CBText>
+                                <FText styleName='Title6'>100%</FText>
                             </View>
                         </View>
                     }

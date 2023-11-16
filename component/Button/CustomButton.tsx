@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { View, StyleSheet, ViewStyle, Text, TouchableOpacity } from 'react-native';
 
-import CBText from '../CBText';
+import FText from '../FText';
 import Icon, { IconSource } from 'react-native-paper/src/components/Icon';
 import { GestureResponderEvent } from 'react-native-modal';
 import { COLORS } from '../../assets/styles/color';
@@ -45,7 +45,7 @@ const CustomButton: React.FC<CustomButton> = ({
                     icon !== undefined &&
                     <View style={{ marginRight: 6 }}>{icon}</View>
                 }
-                <CBText styleName={styleButtonTex} color={labelColor !== undefined ? labelColor : 'white'}>{title}</CBText>
+                <FText styleName={styleButtonTex} color={labelColor !== undefined ? labelColor : 'white'}>{title}</FText>
                 {poiIcon && icon !== undefined &&
                     <View style={{ marginLeft: 6 }}>{icon}</View>}
             </View>

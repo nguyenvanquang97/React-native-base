@@ -5,24 +5,24 @@ import TextStyle from '../assets/styles/TextStyle';
 
 
 
-interface CBText {
-    styleName?: keyof typeof TextStyle,
+interface FText {
+    textStyle?: keyof typeof TextStyle,
     color?: string,
     children: React.ReactNode;
     textAlign?: 'center' | 'left' | 'right' | 'auto'
 }
 
-const CBText: React.FC<CBText> = ({
-    styleName,
+const FText: React.FC<FText> = ({
+    textStyle,
     color,
     children,
     textAlign
 }) => {
     return (
-        <Text style={[styleName ? TextStyle[styleName] : TextStyle.Title4, { color: color, textAlign: textAlign }]}>{children}</Text>
+        <Text style={[textStyle ? TextStyle[textStyle] : TextStyle.Title4, { color: color, textAlign: textAlign }]}>{children}</Text>
     );
 };
 
 
 
-export default CBText;
+export default FText;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState, ReactNode } from "react";
 import { View, StyleSheet, Text, Animated, Dimensions, ViewStyle } from 'react-native';
 import Icon, { IconSource } from 'react-native-paper/src/components/Icon';
-import CBText from '../CBText';
+import FText from '../FText';
 interface ExpansionPanel {
     expanded: boolean,
     height1: number,

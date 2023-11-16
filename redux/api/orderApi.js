@@ -1,6 +1,5 @@
 import fetchClient from "./fetchClient";
-
-const { USERDATA } = require("../../utils/UserData");
+import { USERDATA } from "../../Utils/Setting";
 
 const orderApi = {
     getOrder(itemCode,listStatus,keySearch,page) {

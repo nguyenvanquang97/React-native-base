@@ -1,6 +1,6 @@
 import React from 'react';
 import {SvgXml} from 'react-native-svg';
-import { COLORS } from '../assets/styles/color';
+import { COLORS } from '../../assets/styles/color';
 
 interface FIconProps {
   icon: string;

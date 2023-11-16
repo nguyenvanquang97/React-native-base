@@ -1,7 +1,7 @@
 import React, { Children, ReactNode } from 'react';
 import { View, StyleSheet, ViewStyle, Text, TextStyle, GestureResponderEvent, TouchableOpacity } from 'react-native';
 import Icon, { IconSource } from 'react-native-paper/src/components/Icon';
-import CBText from '../CBText';
+import FText from '../FText';
 interface ListTitle {
     iconLeft?: IconSource | any,
     iconLeft2?: IconSource | any,
@@ -53,8 +53,8 @@ const ListTitle: React.FC<ListTitle> = ({
 
 
                     <View style={[styles.view3, { alignItems: check ? 'center' : (childrenLeft ? ('flex-end') : 'flex-start') }]}>
-                        <CBText styleName={subTile ? 'Title3' : 'Title5'}>{contentTitle}</CBText>
-                        {subTile !== undefined && <CBText styleName='Subtitle3'>{subTile}</CBText>}
+                        <FText styleName={subTile ? 'Title3' : 'Title5'}>{contentTitle}</FText>
+                        {subTile !== undefined && <FText styleName='Subtitle3'>{subTile}</FText>}
                     </View>
                     {childrenRight &&
                         <View style={styles.view2} >
@@ -78,8 +78,8 @@ const ListTitle: React.FC<ListTitle> = ({
                                     <TouchableOpacity onPress={iconLeft.props.onPress} style={{ marginHorizontal: 5 }}>{iconLeft}</TouchableOpacity>
                                 }
                                 <View style={{ marginLeft: 5 }}>
-                                    <CBText styleName={subTile ? 'Title3' : 'Title4'}>{titleLeft}</CBText>
-                                    {subTile !== undefined && <CBText styleName='Subtitle3'>{subTile}</CBText>}
+                                    <FText styleName={subTile ? 'Title3' : 'Title4'}>{titleLeft}</FText>
+                                    {subTile !== undefined && <FText styleName='Subtitle3'>{subTile}</FText>}
                                 </View>
 
                             </View>
@@ -89,7 +89,7 @@ const ListTitle: React.FC<ListTitle> = ({
                                     <TouchableOpacity style={{
                                         flexDirection: 'row', justifyContent: 'flex-end', padding: 5, alignItems: 'center',
                                     }} onPress={iconRight.props.onPress}>
-                                        {titleRight !== undefined && <CBText styleName='ButonText2' >{titleRight}</CBText>}
+                                        {titleRight !== undefined && <FText styleName='ButonText2' >{titleRight}</FText>}
                                         {iconRight !== undefined &&
                                             <View style={{ marginHorizontal: 6, alignItems: 'center' }}>{iconRight}</View>
                                         }
@@ -107,7 +107,7 @@ const ListTitle: React.FC<ListTitle> = ({
 
                         }, style]}>
                             <TouchableOpacity style={styles.view1} onPress={iconRight.props.onPress}>
-                                {titleRight !== undefined && <CBText styleName='ButonText2' >{titleRight}</CBText>}
+                                {titleRight !== undefined && <FText styleName='ButonText2' >{titleRight}</FText>}
 
                                 {iconRight !== undefined &&
                                     <View style={{ marginHorizontal: 5 }}>{iconRight}</View>
@@ -118,8 +118,8 @@ const ListTitle: React.FC<ListTitle> = ({
                             <View style={styles.view2}>
 
                                 <View style={{ marginHorizontal: 5 }} >
-                                    <CBText styleName={subTile ? 'Title3' : 'Title4'}>{titleLeft}</CBText>
-                                    {subTile !== undefined && <CBText styleName='Subtitle3'>{subTile}</CBText>}
+                                    <FText styleName={subTile ? 'Title3' : 'Title4'}>{titleLeft}</FText>
+                                    {subTile !== undefined && <FText styleName='Subtitle3'>{subTile}</FText>}
                                 </View>
                                 {iconLeft !== undefined &&
                                     <View style={{ marginHorizontal: 5 }}>{iconLeft}</View>

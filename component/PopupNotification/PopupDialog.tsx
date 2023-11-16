@@ -3,7 +3,7 @@ import { View, StyleSheet, ViewStyle, TouchableOpacity } from 'react-native';
 import Modal from 'react-native-modal';
 import Icon, { IconSource } from 'react-native-paper/src/components/Icon';
 import { Text } from 'react-native-svg';
-import CBText from '../CBText';
+import FText from '../FText';
 
 
 interface PopupDialog {
@@ -45,18 +45,18 @@ const PopupDialog: React.FC<PopupDialog> = ({
                     </View>
 
                 }
-                <CBText styleName='Title2'>{title}</CBText>
+                <FText styleName='Title2'>{title}</FText>
                 <View style={{ marginVertical: 10 }}>
-                    <CBText styleName='BodyText2' textAlign='center'>{bodyTitle}</CBText></View>
+                    <FText styleName='BodyText2' textAlign='center'>{bodyTitle}</FText></View>
 
                 <View style={{ flexDirection: 'row' }}>
                     {titleButtonleft !== undefined &&
                         <TouchableOpacity style={[styles.viewButton, { backgroundColor: '#F3F3F3', marginRight: 10 }]}>
-                            <CBText styleName='ButonText2' color='#8C8C8C'>{titleButtonleft}</CBText>
+                            <FText styleName='ButonText2' color='#8C8C8C'>{titleButtonleft}</FText>
                         </TouchableOpacity>
                     }
                     <TouchableOpacity style={[styles.viewButton, { backgroundColor: backgroundColor }]}>
-                        <CBText styleName='ButonText2' color='#FFFFFF'>{titleButton}</CBText>
+                        <FText styleName='ButonText2' color='#FFFFFF'>{titleButton}</FText>
                     </TouchableOpacity>
                 </View>
             </View>
